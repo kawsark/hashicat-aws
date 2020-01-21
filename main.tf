@@ -37,14 +37,14 @@ resource aws_security_group "hashicat" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = [${var.allowed_cidr}]
+    cidr_blocks = ["${var.allowed_cidr}"]
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = [${var.allowed_cidr}]
+    cidr_blocks = ["${var.allowed_cidr}"]
   }
 
   egress {
