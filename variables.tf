@@ -9,6 +9,11 @@ variable "prefix" {
   description = "This prefix will be included in the name of most resources."
 }
 
+variable "allowed_cidr" {
+  description = "Adding allowed CIDR for bonus Lab"
+  default = "0.0.0.0/0"
+}
+
 variable "region" {
   description = "The region where the resources are created."
   default     = "us-east-1"
