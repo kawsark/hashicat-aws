@@ -9,8 +9,8 @@ resource aws_vpc "hashicat" {
 
   tags = {
     Name = "${var.prefix}-vpc"
-    owner = "kawsar@hashicorp.com"
-    TTL = "168h"
+    owner = var.owner
+    TTL = var.TTL
   }
 }
 
@@ -20,6 +20,8 @@ resource aws_subnet "hashicat" {
 
   tags = {
     name = "${var.prefix}-subnet"
+    owner = var.owner
+    TTL = var.TTL
   }
 }
 
