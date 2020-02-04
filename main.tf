@@ -61,6 +61,8 @@ resource aws_security_group "hashicat" {
 
   tags = {
     Name = "${var.prefix}-security-group"
+    owner = var.owner
+    TTL = var.TTL
   }
 }
 
@@ -74,6 +76,8 @@ resource aws_internet_gateway "hashicat" {
 
   tags = {
     Name = "${var.prefix}-internet-gateway"
+    owner = var.owner
+    TTL = var.TTL
   }
 }
 
@@ -118,8 +122,8 @@ resource aws_instance "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
-    Billable = "asdf"
-    Department = "asdf"
+    owner = var.owner
+    TTL = var.TTL
   }
 }
 
