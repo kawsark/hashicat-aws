@@ -124,6 +124,8 @@ resource aws_instance "hashicat" {
     Name = "${var.prefix}-hashicat-instance"
     owner = var.owner
     TTL = var.TTL
+    Department = "SE"
+    Billable = "yes"
   }
 }
 
